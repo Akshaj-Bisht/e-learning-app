@@ -17,7 +17,6 @@ import { toast } from "sonner";
 
 export default function UploadMaterialPage() {
 	const router = useRouter();
-	const { toast } = toast();
 	const [isLoading, setIsLoading] = useState(false);
 	const [file, setFile] = useState<File | null>(null);
 
