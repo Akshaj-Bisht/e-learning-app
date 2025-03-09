@@ -4,7 +4,6 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Toaster } from "sonner";
-import { UserSync } from "@/components/UserSync";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -29,12 +28,11 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" className="dark">
 			<ClerkProvider>
 				<body
 					className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
 				>
-					<UserSync />
 					<Navbar />
 					<main className="flex-1">{children}</main>
 					<Footer />

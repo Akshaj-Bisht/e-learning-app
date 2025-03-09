@@ -50,7 +50,7 @@ export default async function GroupsPage() {
 	);
 
 	return (
-		<div className="container py-8">
+		<div className="container py-8 m-auto">
 			<div className="flex justify-between items-center mb-8">
 				<h1 className="text-3xl font-bold">Study Groups</h1>
 				<Link href="/groups/create">

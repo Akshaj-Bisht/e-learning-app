@@ -53,7 +53,7 @@ export default function UploadMaterialPage() {
 	};
 
 	return (
-		<div className="container py-8">
+		<div className="container py-8 m-auto">
 			<div className="flex items-center mb-8">
 				<Link href="/materials" className="mr-4">
 					<Button variant="outline" size="sm">
