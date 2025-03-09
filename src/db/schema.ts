@@ -7,8 +7,6 @@ import {
 	boolean,
 	integer,
 	primaryKey,
-	json,
-	uuid,
 } from "drizzle-orm/pg-core";
 
 // Users table
