@@ -3,16 +3,14 @@ import { handle } from "hono/vercel";
 import { cors } from "hono/cors";
 import { logger } from "hono/logger";
 import { secureHeaders } from "hono/secure-headers";
-import { zValidator } from "@hono/zod-validator";
 import { auth } from "@clerk/nextjs/server";
-import { z } from "zod";
 import { db } from "@/db";
 
 // Create a new Hono app
 const app = new Hono().use(logger()).use(secureHeaders()).use(cors());
 
 // Public routes
-const publicRoutes = app.basePath("/public");
+// const publicRoutes = app.basePath("/public");
 
 // Protected routes with Clerk authentication
 const api = app.basePath("/api");
