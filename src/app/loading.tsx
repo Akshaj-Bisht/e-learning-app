@@ -1,12 +1,10 @@
 import React from "react";
-import "./LoadingSkeleton.css"; // Import the CSS file for styling
+import "./LoadingSpinner.css";
 
 export default function Loading() {
 	return (
-		<div className="loading-skeleton">
-			<div className="skeleton-header"></div>
-			<div className="skeleton-content"></div>
-			<div className="skeleton-footer"></div>
+		<div className="spinner-container">
+			<div className="spinner"></div>
 		</div>
 	);
 }
