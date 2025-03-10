@@ -5,7 +5,7 @@ import { logger } from "hono/logger";
 import { secureHeaders } from "hono/secure-headers";
 import { auth } from "@clerk/nextjs/server";
 import { db } from "@/db";
-
+export const runtime = "edge";
 // Create a new Hono app
 const app = new Hono().use(logger()).use(secureHeaders()).use(cors());
 
@@ -77,3 +77,4 @@ export const POST = handle(app);
 export const PUT = handle(app);
 export const DELETE = handle(app);
 export const PATCH = handle(app);
+export default app as never;

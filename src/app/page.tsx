@@ -10,8 +10,9 @@ export default function Home() {
 	return (
 		<div className="flex flex-col min-h-[calc(100vh-4rem)]">
 			{/* Hero Section */}
-			<section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-background to-muted">
-				<div className="container px-4 md:px-6">
+			<section className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden">
+				<div className="absolute inset-0 bg-background"></div>
+				<div className="container px-4 md:px-6 relative z-10">
 					<div className="flex flex-col items-center space-y-4 text-center">
 						<div className="space-y-2">
 							<h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
@@ -43,14 +44,16 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
+				<div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-muted/30"></div>
 			</section>
 
 			{/* Features Section */}
 			<section
 				id="features"
-				className="w-full py-12 md:py-24 lg:py-32 bg-background"
+				className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden"
 			>
-				<div className="container px-4 md:px-6">
+				<div className="absolute inset-0 bg-muted/30"></div>
+				<div className="container px-4 md:px-6 relative z-10">
 					<div className="flex flex-col items-center justify-center space-y-4 text-center">
 						<div className="space-y-2">
 							<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -63,7 +66,7 @@ export default function Home() {
 					</div>
 					<div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3 lg:gap-12 mt-8">
 						{/* Feature 1 */}
-						<div className="flex flex-col items-center space-y-2 border p-6 rounded-lg">
+						<div className="flex flex-col items-center space-y-2 border p-6 rounded-lg bg-background/70 backdrop-blur-sm">
 							<div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +91,7 @@ export default function Home() {
 						</div>
 
 						{/* Feature 2 */}
-						<div className="flex flex-col items-center space-y-2 border p-6 rounded-lg">
+						<div className="flex flex-col items-center space-y-2 border p-6 rounded-lg bg-background/70 backdrop-blur-sm">
 							<div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +119,7 @@ export default function Home() {
 						</div>
 
 						{/* Feature 3 */}
-						<div className="flex flex-col items-center space-y-2 border p-6 rounded-lg">
+						<div className="flex flex-col items-center space-y-2 border p-6 rounded-lg bg-background/70 backdrop-blur-sm">
 							<div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -145,11 +148,14 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
+				<div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-muted/30 to-transparent"></div>
+				<div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-background"></div>
 			</section>
 
 			{/* CTA Section */}
-			<section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
-				<div className="container px-4 md:px-6">
+			<section className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden">
+				<div className="absolute inset-0 bg-background"></div>
+				<div className="container px-4 md:px-6 relative z-10">
 					<div className="flex flex-col items-center justify-center space-y-4 text-center">
 						<div className="space-y-2">
 							<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -160,13 +166,27 @@ export default function Home() {
 								platform.
 							</p>
 						</div>
-						<div className="space-x-4">
-							<SignUpButton mode="modal">
-								<Button size="lg">Sign Up Now</Button>
-							</SignUpButton>
+						<div className="space-x-4 mt-6">
+							{isSignedIn ? (
+								<Link href="/dashboard">
+									<Button size="lg">Go to Dashboard</Button>
+								</Link>
+							) : (
+								<>
+									<SignUpButton mode="modal">
+										<Button size="lg">Get Started</Button>
+									</SignUpButton>
+									<Link href="#features">
+										<Button variant="outline" size="lg">
+											Learn More
+										</Button>
+									</Link>
+								</>
+							)}
 						</div>
 					</div>
 				</div>
+				<div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-background to-transparent"></div>
 			</section>
 		</div>
 	);
