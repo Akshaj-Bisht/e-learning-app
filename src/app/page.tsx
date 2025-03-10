@@ -66,7 +66,7 @@ export default function Home() {
 					</div>
 					<div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3 lg:gap-12 mt-8">
 						{/* Feature 1 */}
-						<div className="flex flex-col items-center space-y-2 border p-6 rounded-lg bg-background/70 backdrop-blur-sm">
+						<div className="flex flex-col items-center space-y-2 border p-6 rounded-lg bg-background/70 backdrop-blur-sm bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm transition-transform duration-200 hover:shadow-lg hover:scale-[1.02] cursor-pointer">
 							<div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +91,7 @@ export default function Home() {
 						</div>
 
 						{/* Feature 2 */}
-						<div className="flex flex-col items-center space-y-2 border p-6 rounded-lg bg-background/70 backdrop-blur-sm">
+						<div className="flex flex-col items-center space-y-2 border p-6 rounded-lg bg-background/70 backdrop-blur-sm bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm transition-transform duration-200 hover:shadow-lg hover:scale-[1.02] cursor-pointer">
 							<div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +119,7 @@ export default function Home() {
 						</div>
 
 						{/* Feature 3 */}
-						<div className="flex flex-col items-center space-y-2 border p-6 rounded-lg bg-background/70 backdrop-blur-sm">
+						<div className="flex flex-col items-center space-y-2 border p-6 rounded-lg bg-background/70 backdrop-blur-sm bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm transition-transform duration-200 hover:shadow-lg hover:scale-[1.02] cursor-pointer">
 							<div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -192,4 +192,4 @@ export default function Home() {
 	);
 }
 
-use card from shad cn ui 
+
